@@ -1,0 +1,200 @@
+<!DOCTYPE html>  
+<html lang="es"> <!--español-->
+<head>
+    <meta charset="UTF-8"> <!-- tildes  -->
+    <title> VENTA DE MOTOS Y REPUESTOS    </title>  <!-- ,-->
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        header {
+            background-image: url('https://www.bing.com/images/search?view=detailV2&ccid=kQ2EEii8&id=5E6F7834B4893D6D24EB27C16E8CDD259655D2F5&thid=OIP.kQ2EEii8-wzygYugvMgbfQHaJ4&mediaurl=https%3a%2f%2fbetaccesorios.com%2fcdn%2fshop%2ffiles%2fWhatsAppImage2023-06-14at3.02.13PM.jpg%3fv%3d1686773271&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.910d841228bcfb0cf2818ba0bcc81b7d%3frik%3d9dJVliXdjG7BJw%26pid%3dImgRaw%26r%3d0&exph=1379&expw=1034&q=rosas+eternas+&simid=608025198252460744&FORM=IRPRST&ck=273B3AFA3DEADC7B0FF33D803BCFABEB&selectedIndex=2&itb=0');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center; 
+        }
+        header h1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .producto {
+            background-color: white;
+            width: 300px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .producto:hover {
+            transform: scale(1.03);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+        .boton-compra {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .boton-compra:hover {
+            background-color: #219150;
+        }
+        .contacto {
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+        .contacto a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .contacto a:hover {
+            color: #2980b9;
+        }
+
+        /* Estilos para ventana emergente */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .popup-contenido {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            animation: entrada 0.5s ease;
+        }
+        .popup-contenido img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .popup-contenido h2 {
+            margin: 0 0 10px 0;
+        }
+        .cerrar {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @keyframes entrada {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TALLER Y VENTAS DE MOTOS CROOS Y REPUESTOS </h1>
+</header>
+
+<section class="contenedor">
+
+    <div class="producto">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.OacuhwR19n83SoFgpCaS-wHaE7?w=2000&h=1333&rs=1&pid=ImgDetMain&o=7&rm=3" alt="MOTO YZ">
+        <h2> MOTO YZ </h2>
+        <p><strong>Q55,000</strong></p>
+        <p> MOTO DOS TIEMPOS  </p>
+        <button class="boton-compra" onclick="mostrarPopup('MOTO YZ ')">Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="https://i.ebayimg.com/images/g/j44AAOSwrO5itix8/s-l1600.webp" alt="Repuestos">
+        <h2> REPUESTOS </h2>
+        <p><strong>Q1,137.17</strong></p>
+        <p>REPUESTOS  </p>
+        <button class="boton-compra" onclick="mostrarPopup('REPUESTOS YZ')">Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.1ge6wtpp2UTm3S_uwSodDwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="ACEITE YAMALUBE">
+        <h2>ACEITE YAMALUBE 20W50</h2>
+        <p><strong>Q1,744.87</strong></p>
+        <p>ACEITE </p>
+        <button class="boton-compra" onclick="mostrarPopup('ACEITE')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="https://motoshop.ar/wp-content/uploads/2024/06/20231130_0937411-1067x800.jpg" alt="TALLER">
+        <h2>TALLER MECANICO</h2>
+        <p><strong></strong></p>
+        <p>TALLER  </p>
+        <button class="boton-contactar" onclick="mostrarPopup('TALLER MECANICO')">contactar</button>
+    </div>
+
+</section>
+
+<div class="contacto">
+    <h3>Contáctanos</h3>
+    <a href=" https://wa.me/ 49774805" target="_blank">📱 WhatsApp</a>
+    <a href=" Hernandezceto@gmail.com ">📧 Correo</a>
+    <a href="tel:+50249774805">📞 Llamada</a>
+</div>
+
+
+<div class="popup" id="popup">
+    <div class="popup-contenido">
+        <img src="https://i.imgur.com/U9dFIdh.png" alt="Éxito">
+        <h2>¡Compra realizada!</h2>
+        <p id="mensajeProducto"></p>
+        <button class="cerrar" onclick="cerrarPopup()">Aceptar</button>
+    </div>
+</div>
+
+<script>
+    function mostrarPopup(producto) {
+        document.getElementById("mensajeProducto").innerText = "Has comprado: " + producto + ". Te contactaremos pronto.";
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function cerrarPopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
